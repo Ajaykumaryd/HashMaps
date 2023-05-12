@@ -1,0 +1,21 @@
+import java.util.HashMap;
+public class Solution {
+
+    public static int maxFrequencyNumber(int[] a){ 
+    
+	int max=Integer.MIN_VALUE,ans=0;
+	for(int i=0;i<a.length;i++){
+		int count=0;
+		for(int j=i;j<a.length;j++){
+			if(a[i]==a[j]){
+				count++;
+			}			
+		}
+		if(count>max){
+		max=count;
+		ans=a[i];
+		}
+	}
+return ans;
+    }
+}
